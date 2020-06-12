@@ -4,10 +4,10 @@
   tasks:
     - name: Set loopback ipv4 address
       ios_l3_interface:
-        name: loopback "{{item.number }}"
+        name: loopback "{{items.number }}"
         ipv4: 10.0.{{item.ip}}.1/24
 
-      with_item:
+      with_items:
         - {number: 1, ip: 1}
         - {number: 2, ip: 2}
         - {number: 3, ip: 3}
