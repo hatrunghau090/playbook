@@ -1,7 +1,7 @@
 ---
 - name: dat ip cho loopback
   hosts: all
-  tast:
+  tasks:
     - name: Set loopback ipv4 address
       ios_l3_interface:
         name: loopback "{{item.number }}"
